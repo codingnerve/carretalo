@@ -56,6 +56,7 @@ export function Header() {
   useEffect(() => {
     if (!menuOpen) return;
     const menu = menuRef.current;
+    const toggle = toggleRef.current;
     const focusables = () =>
       menu
         ? Array.from(
@@ -69,7 +70,7 @@ export function Header() {
         return;
       }
       if (e.key !== "Tab") return;
-      const items = [toggleRef.current, ...focusables()].filter(
+      const items = [toggle, ...focusables()].filter(
         (el): el is HTMLElement => el != null,
       );
       if (items.length === 0) return;
@@ -87,7 +88,7 @@ export function Header() {
     window.addEventListener("keydown", onKey);
     return () => {
       window.removeEventListener("keydown", onKey);
-      toggleRef.current?.focus();
+      toggle?.focus();
     };
   }, [menuOpen]);
 
