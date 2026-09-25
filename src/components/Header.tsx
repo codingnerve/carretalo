@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { mainNav } from "@/data/navigation";
 import { site, telHref } from "@/lib/site";
@@ -28,6 +28,8 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const tel = telHref();
+  const menuRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -49,11 +51,44 @@ export function Header() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+  // Focus trap: move focus into the menu on open, wrap Tab at the ends,
+  // close on Escape, and restore focus to the toggle on close.
   useEffect(() => {
     if (!menuOpen) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
+    const menu = menuRef.current;
+    const focusables = () =>
+      menu
+        ? Array.from(
+            menu.querySelectorAll<HTMLElement>("a[href], button:not([disabled])"),
+          )
+        : [];
+    focusables()[0]?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const items = [toggleRef.current, ...focusables()].filter(
+        (el): el is HTMLElement => el != null,
+      );
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement;
+      if (e.shiftKey && active === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      toggleRef.current?.focus();
+    };
   }, [menuOpen]);
 
   return (
@@ -96,6 +131,7 @@ export function Header() {
 
         <button
           type="button"
+          ref={toggleRef}
           className="flex h-11 w-11 items-center justify-center rounded-full text-ink hover:bg-mint md:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -113,7 +149,11 @@ export function Header() {
       </div>
 
       {menuOpen && (
-        <div id="mobile-menu" className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-surface md:hidden">
+        <div
+          id="mobile-menu"
+          ref={menuRef}
+          className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-surface md:hidden"
+        >
           <nav aria-label="Mobile" className="flex flex-col gap-1 px-4 py-6">
             {mainNav.map((link) => (
               <Link
