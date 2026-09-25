@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img">
+  <rect width="800" height="1000" fill="#DDF5E8"/>
+  <rect width="800" height="620" fill="#F7F8F6"/>
+<circle cx="640" cy="140" r="56" fill="#F4D06F" opacity="0.9"/>
+<rect x="80" y="370" width="90" height="250" rx="6" fill="#18A66A" opacity="0.28"/>
+<rect x="200" y="280" width="110" height="340" rx="6" fill="#0F7D4F" opacity="0.32"/>
+<rect x="340" y="410" width="90" height="210" rx="6" fill="#18A66A" opacity="0.22"/>
+<rect x="460" y="230" width="120" height="390" rx="6" fill="#0F7D4F" opacity="0.4"/>
+<rect x="610" y="340" width="100" height="280" rx="6" fill="#18A66A" opacity="0.3"/>
+<path d="M60 720 q 240 -90 380 -20 q 160 80 300 -10" fill="none" stroke="#18A66A" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.5"/>
+
+  <g transform="translate(400 360) scale(2)">
+    <path d="M0 -22 a14 14 0 0 1 14 14 q0 10 -14 26 q-14 -16 -14 -26 a14 14 0 0 1 14 -14 z" fill="#18A66A"/>
+    <circle cx="0" cy="-8" r="5.5" fill="#FFFFFF"/>
+  </g>
+<ellipse cx="400" cy="780" rx="230" ry="24" fill="#0E1714" opacity="0.08"/>
+
+  <g transform="translate(260 640) scale(1.9)">
+    <path d="M10 46 q2 -14 16 -16 l14 -14 q4 -4 10 -4 h38 q6 0 10 4 l16 14 q20 2 22 16 l1 8 q0 6 -6 6 h-8 a14 14 0 0 1 -28 0 h-42 a14 14 0 0 1 -28 0 h-9 q-6 0 -6 -6 z" fill="#0F7D4F"/>
+    <path d="M44 16 h20 v14 h-26 z" fill="#DDF5E8" opacity="0.9"/>
+    <path d="M70 16 h16 q3 0 5 2 l12 12 h-33 z" fill="#DDF5E8" opacity="0.9"/>
+    <circle cx="39" cy="60" r="10" fill="#0E1714"/><circle cx="39" cy="60" r="4.5" fill="#E7EBE8"/>
+    <circle cx="109" cy="60" r="10" fill="#0E1714"/><circle cx="109" cy="60" r="4.5" fill="#E7EBE8"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="290" y="936" width="220" height="36" rx="18" fill="#FFFFFF" opacity="0.92"/>
+    <text x="400" y="960" text-anchor="middle" font-size="17" font-weight="bold" fill="#0F7D4F">New York — placeholder</text>
+  </g>
+</svg>

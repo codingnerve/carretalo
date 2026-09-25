@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" role="img">
+  <rect width="1000" height="1200" fill="#DDF5E8"/>
+  <rect width="1000" height="744" fill="#F7F8F6"/>
+<circle cx="790" cy="170" r="70" fill="#F4D06F" opacity="0.9"/>
+
+  <path d="M0 720 q 200 -70 450 -12 q 200 -46 550 4 V 1200 H0 z" fill="#18A66A" opacity="0.16"/>
+  <path d="M0 750 q 300 -50 600 -6 q 250 -30 400 6 V 1200 H0 z" fill="#18A66A" opacity="0.25"/>
+<path d="M80 960 q 260 -260 480 -120 q 200 130 360 -40" fill="none" stroke="#18A66A" stroke-width="6" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.5"/>
+
+  <g transform="translate(240 320) scale(1.9)">
+    <path d="M0 -22 a14 14 0 0 1 14 14 q0 10 -14 26 q-14 -16 -14 -26 a14 14 0 0 1 14 -14 z" fill="#18A66A"/>
+    <circle cx="0" cy="-8" r="5.5" fill="#FFFFFF"/>
+  </g>
+
+  <g transform="translate(700 470) scale(1.4)">
+    <path d="M0 -22 a14 14 0 0 1 14 14 q0 10 -14 26 q-14 -16 -14 -26 a14 14 0 0 1 14 -14 z" fill="#0F7D4F"/>
+    <circle cx="0" cy="-8" r="5.5" fill="#FFFFFF"/>
+  </g>
+
+  <g transform="translate(500 700) scale(1.2)">
+    <path d="M0 -22 a14 14 0 0 1 14 14 q0 10 -14 26 q-14 -16 -14 -26 a14 14 0 0 1 14 -14 z" fill="#18A66A"/>
+    <circle cx="0" cy="-8" r="5.5" fill="#FFFFFF"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="390" y="1136" width="220" height="36" rx="18" fill="#FFFFFF" opacity="0.92"/>
+    <text x="500" y="1160" text-anchor="middle" font-size="17" font-weight="bold" fill="#0F7D4F">Popular locations — placeholder</text>
+  </g>
+</svg>

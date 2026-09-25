@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img">
+  <rect width="800" height="600" fill="#DDF5E8"/>
+  <rect width="800" height="372" fill="#F7F8F6"/>
+<circle cx="650" cy="110" r="46" fill="#F4D06F" opacity="0.9"/>
+
+  <path d="M0 372 q 160 -70 360 -12 q 160 -46 440.00000000000006 4 V 600 H0 z" fill="#18A66A" opacity="0.16"/>
+  <path d="M0 402 q 240 -50 480 -6 q 200 -30 320 6 V 600 H0 z" fill="#18A66A" opacity="0.25"/>
+<path d="M60 372 q 220 -120 340 -40 q 140 90 340 -20" fill="none" stroke="#18A66A" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.5"/>
+
+  <g transform="translate(120 210) scale(1.1)">
+    <path d="M0 -22 a14 14 0 0 1 14 14 q0 10 -14 26 q-14 -16 -14 -26 a14 14 0 0 1 14 -14 z" fill="#18A66A"/>
+    <circle cx="0" cy="-8" r="5.5" fill="#FFFFFF"/>
+  </g>
+<ellipse cx="400" cy="470" rx="240" ry="26" fill="#0E1714" opacity="0.08"/>
+
+  <g transform="translate(255 330) scale(2.05)">
+    <path d="M10 46 q2 -14 16 -16 l14 -14 q4 -4 10 -4 h38 q6 0 10 4 l16 14 q20 2 22 16 l1 8 q0 6 -6 6 h-8 a14 14 0 0 1 -28 0 h-42 a14 14 0 0 1 -28 0 h-9 q-6 0 -6 -6 z" fill="#0F7D4F"/>
+    <path d="M44 16 h20 v14 h-26 z" fill="#DDF5E8" opacity="0.9"/>
+    <path d="M70 16 h16 q3 0 5 2 l12 12 h-33 z" fill="#DDF5E8" opacity="0.9"/>
+    <circle cx="39" cy="60" r="10" fill="#0E1714"/><circle cx="39" cy="60" r="4.5" fill="#E7EBE8"/>
+    <circle cx="109" cy="60" r="10" fill="#0E1714"/><circle cx="109" cy="60" r="4.5" fill="#E7EBE8"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="290" y="536" width="220" height="36" rx="18" fill="#FFFFFF" opacity="0.92"/>
+    <text x="400" y="560" text-anchor="middle" font-size="17" font-weight="bold" fill="#0F7D4F">SUV — placeholder</text>
+  </g>
+</svg>
