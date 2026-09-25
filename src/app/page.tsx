@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { vehicles } from "@/data/vehicles";
 import { journeyTypes } from "@/data/journey-types";
@@ -14,6 +15,10 @@ import { TravelStory } from "@/components/sections/TravelStory";
 import { TrustPoints } from "@/components/sections/TrustPoints";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
