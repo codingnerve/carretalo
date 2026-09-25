@@ -4,6 +4,9 @@ import Script from "next/script";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { GA_ID } from "@/lib/analytics";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,9 +45,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
-        <main id="main" className="flex-1">
+        <Header />
+        <main id="main" className="flex-1 pb-20 md:pb-0">
           {children}
         </main>
+        <Footer />
+        <StickyMobileCTA />
         {GA_ID && (
           <>
             <Script
