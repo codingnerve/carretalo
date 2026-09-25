@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
+/*
+ * CarRentalO design tokens — travel-tech: light, energetic, emerald.
+ * Deliberately distinct from CarsonRento (cream/teal editorial).
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --surface: #f7f8f6;
+  --surface-raised: #ffffff;
+  --ink: #0e1714;
+  --ink-soft: #21302a;
+  --ink-muted: #5b6863;
+  --brand: #18a66a;
+  --brand-strong: #0f7d4f;
+  --mint: #ddf5e8;
+  --line: #e7ebe8;
+  --beige: #f2efe8;
+  --on-brand: #ffffff;
+  --on-ink: #eef2ef;
+  --danger: #b3362c;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-mint: var(--mint);
+  --color-line: var(--line);
+  --color-beige: var(--beige);
+  --color-on-brand: var(--on-brand);
+  --color-on-ink: var(--on-ink);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-fade-up: fade-up 0.5s ease-out both;
+  --animate-rise-in: rise-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(24px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--mint);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

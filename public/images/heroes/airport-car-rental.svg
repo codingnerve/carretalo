@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img">
+  <rect width="1600" height="900" fill="#DDF5E8"/>
+  <rect width="1600" height="558" fill="#F7F8F6"/>
+<circle cx="1340" cy="150" r="70" fill="#F4D06F" opacity="0.9"/>
+
+  <path d="M0 558 q 320 -70 720 -12 q 320 -46 880.0000000000001 4 V 900 H0 z" fill="#18A66A" opacity="0.16"/>
+  <path d="M0 588 q 480 -50 960 -6 q 400 -30 640 6 V 900 H0 z" fill="#18A66A" opacity="0.25"/>
+<path d="M80 675 q 400 -220 800 -80 q 320 110 640 -60" fill="none" stroke="#18A66A" stroke-width="6" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.5"/>
+
+  <g transform="translate(256 306) scale(1.6)">
+    <path d="M0 -22 a14 14 0 0 1 14 14 q0 10 -14 26 q-14 -16 -14 -26 a14 14 0 0 1 14 -14 z" fill="#18A66A"/>
+    <circle cx="0" cy="-8" r="5.5" fill="#FFFFFF"/>
+  </g>
+
+  <g transform="translate(1280 450) scale(1.3)">
+    <path d="M0 -22 a14 14 0 0 1 14 14 q0 10 -14 26 q-14 -16 -14 -26 a14 14 0 0 1 14 -14 z" fill="#0F7D4F"/>
+    <circle cx="0" cy="-8" r="5.5" fill="#FFFFFF"/>
+  </g>
+<ellipse cx="800" cy="702" rx="448.00000000000006" ry="30" fill="#0E1714" opacity="0.08"/>
+
+  <g transform="translate(580 492) scale(3.1)">
+    <path d="M10 46 q2 -14 16 -16 l14 -14 q4 -4 10 -4 h38 q6 0 10 4 l16 14 q20 2 22 16 l1 8 q0 6 -6 6 h-8 a14 14 0 0 1 -28 0 h-42 a14 14 0 0 1 -28 0 h-9 q-6 0 -6 -6 z" fill="#0F7D4F"/>
+    <path d="M44 16 h20 v14 h-26 z" fill="#DDF5E8" opacity="0.9"/>
+    <path d="M70 16 h16 q3 0 5 2 l12 12 h-33 z" fill="#DDF5E8" opacity="0.9"/>
+    <circle cx="39" cy="60" r="10" fill="#0E1714"/><circle cx="39" cy="60" r="4.5" fill="#E7EBE8"/>
+    <circle cx="109" cy="60" r="10" fill="#0E1714"/><circle cx="109" cy="60" r="4.5" fill="#E7EBE8"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="690" y="836" width="220" height="36" rx="18" fill="#FFFFFF" opacity="0.92"/>
+    <text x="800" y="860" text-anchor="middle" font-size="17" font-weight="bold" fill="#0F7D4F">Airport rental — placeholder</text>
+  </g>
+</svg>
