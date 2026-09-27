@@ -24,7 +24,7 @@ const benefits = [
 export function BenefitStrip() {
   return (
     <section aria-label="Why rent with us" className="border-y border-line bg-surface-raised">
-      <ul className="mx-auto flex max-w-6xl items-stretch gap-2 overflow-x-auto px-4 py-4 sm:px-6 md:justify-between">
+      <ul className="mx-auto flex max-w-[1400px] items-stretch gap-2 overflow-x-auto px-3 py-4 sm:px-6 md:justify-between">
         {benefits.map((b) => (
           <li
             key={b.label}

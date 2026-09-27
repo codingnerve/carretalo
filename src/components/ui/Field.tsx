@@ -10,7 +10,7 @@ import type {
  */
 
 const inputClasses =
-  "w-full rounded-xl border border-line bg-surface-raised px-4 py-3 text-sm text-ink placeholder:text-ink-muted/70 transition-colors focus:border-brand focus:outline-none focus:ring-2 focus:ring-mint";
+  "w-full rounded-xl border border-line bg-surface-raised px-3 py-3 text-sm text-ink placeholder:text-ink-muted/70 transition-colors focus:border-brand focus:outline-none focus:ring-2 focus:ring-mint";
 
 function FieldShell({
   label,

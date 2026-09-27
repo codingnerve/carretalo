@@ -4,32 +4,32 @@
  * SVG placeholders without touching component code.
  */
 export const vehicleImages = {
-  economy: "/images/vehicles/economy.svg",
-  compact: "/images/vehicles/compact.svg",
-  sedan: "/images/vehicles/sedan.svg",
-  suv: "/images/vehicles/suv.svg",
-  luxury: "/images/vehicles/luxury.svg",
-  family: "/images/vehicles/family.svg",
+  economy: "/images/vehicles/economy.webp",
+  compact: "/images/vehicles/compact.webp",
+  sedan: "/images/vehicles/sedan.webp",
+  suv: "/images/vehicles/suv.webp",
+  luxury: "/images/vehicles/luxury.webp",
+  family: "/images/vehicles/family.webp",
 } as const;
 
 export const journeyImages = {
-  airport: "/images/journeys/airport.svg",
-  business: "/images/journeys/business.svg",
-  weekend: "/images/journeys/weekend.svg",
-  "road-trip": "/images/journeys/road-trip.svg",
+  airport: "/images/journeys/airport.webp",
+  business: "/images/journeys/business.webp",
+  weekend: "/images/journeys/weekend.webp",
+  "road-trip": "/images/journeys/road-trip.webp",
 } as const;
 
 export const heroImages = {
-  home: "/images/heroes/home.svg",
-  "car-rental": "/images/heroes/car-rental.svg",
-  "airport-car-rental": "/images/heroes/airport-car-rental.svg",
-  "suv-rental": "/images/heroes/suv-rental.svg",
-  "luxury-car-rental": "/images/heroes/luxury-car-rental.svg",
-  "monthly-car-rental": "/images/heroes/monthly-car-rental.svg",
-  cta: "/images/heroes/cta.svg",
+  home: "/images/heroes/home.webp",
+  "car-rental": "/images/heroes/car-rental.webp",
+  "airport-car-rental": "/images/heroes/airport-car-rental.webp",
+  "suv-rental": "/images/heroes/suv-rental.webp",
+  "luxury-car-rental": "/images/heroes/luxury-car-rental.webp",
+  "monthly-car-rental": "/images/heroes/monthly-car-rental.webp",
+  cta: "/images/heroes/cta.webp",
 } as const;
 
 export const travelImages = {
-  story: "/images/travel/story.svg",
-  locations: "/images/travel/locations.svg",
+  story: "/images/travel/story.webp",
+  locations: "/images/travel/locations.webp",
 } as const;

@@ -15,7 +15,7 @@ const tileStyles = [
 export function JourneyTypes({ journeys }: { journeys: JourneyType[] }) {
   return (
     <section aria-labelledby="journeys-heading" className="bg-beige/60 py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-[1400px] px-3 sm:px-4">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-strong">
           Journey types
         </p>

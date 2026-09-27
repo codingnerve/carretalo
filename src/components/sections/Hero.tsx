@@ -31,8 +31,8 @@ function RouteDoodle() {
 
 export function Hero() {
   return (
-    <section aria-label="Intro" className="relative overflow-hidden">
-      <div className="mx-auto max-w-6xl px-4 pb-10 pt-10 sm:px-6 md:pb-14 md:pt-16">
+    <section aria-label="Intro" className="relative overflow-visible">
+      <div className="mx-auto max-w-[1400px] px-3 pb-8 pt-8 sm:px-6 md:pb-12 md:pt-14">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="animate-fade-up">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-strong">
@@ -55,7 +55,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative hidden lg:block">
+          <div className="relative hidden lg:block overflow-hidden rounded-[2.5rem]">
             <RouteDoodle />
             <div className="animate-rise-in relative overflow-hidden rounded-[2rem] border border-line bg-mint shadow-lg shadow-ink/5">
               <Image
@@ -71,9 +71,9 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Floating search panel — the primary conversion element. */}
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="animate-rise-in relative z-10 -mb-8 lg:-mt-6">
+      {/* Search panel — primary conversion element, full-width card below hero. */}
+      <div className="relative z-30 mx-auto max-w-[1400px] px-3 pb-16 sm:px-6 md:pb-24">
+        <div className="overflow-visible">
           <SearchWidget />
         </div>
       </div>

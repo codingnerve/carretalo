@@ -26,7 +26,7 @@ export function FinalCTA() {
           strokeLinecap="round"
         />
       </svg>
-      <div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6">
+      <div className="relative mx-auto max-w-[1400px] px-4 text-center sm:px-6">
         <h2 id="cta-heading" className="mx-auto max-w-xl text-3xl font-extrabold tracking-tight sm:text-4xl">
           Ready to find your ride?
         </h2>

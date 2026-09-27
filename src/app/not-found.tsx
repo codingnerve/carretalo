@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button";
 
 export default function NotFound() {
   return (
-    <div className="mx-auto flex max-w-2xl flex-col items-center px-4 py-24 text-center sm:px-6">
+    <div className="mx-auto flex max-w-2xl flex-col items-center px-3 py-24 text-center sm:px-6">
       <svg viewBox="0 0 200 80" aria-hidden="true" className="h-20 w-52 text-brand">
         <path
           d="M10 70 C 60 20, 90 75, 130 35 S 180 15, 195 10"

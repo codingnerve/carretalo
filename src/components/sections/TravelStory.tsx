@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 
 export function TravelStory() {
   return (
-    <section aria-labelledby="story-heading" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+    <section aria-labelledby="story-heading" className="mx-auto max-w-[1400px] px-3 py-20 sm:px-6">
       <div className="relative overflow-hidden rounded-3xl">
         <Image
           src={travelImages.story}

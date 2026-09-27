@@ -20,7 +20,7 @@ const steps = [
 export function HowItWorks() {
   return (
     <section aria-labelledby="how-heading" className="border-y border-line bg-surface-raised py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-[1400px] px-3 sm:px-4">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-strong">
           How it works
         </p>

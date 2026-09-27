@@ -25,6 +25,18 @@ export const metadata: Metadata = {
     siteName: site.name,
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1200,
+        height: 400,
+        alt: site.name,
+      },
+    ],
+  },
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
   },
   twitter: {
     card: "summary_large_image",

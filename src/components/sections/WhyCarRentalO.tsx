@@ -17,7 +17,7 @@ const smallBenefits = [
 
 export function WhyCarRentalO() {
   return (
-    <section aria-labelledby="why-heading" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+    <section aria-labelledby="why-heading" className="mx-auto max-w-[1400px] px-3 py-20 sm:px-6">
       <h2 id="why-heading" className="max-w-md text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
         Everything you need to get moving.
       </h2>

@@ -30,7 +30,7 @@ export default async function ContactPage({ searchParams }: PageProps<"/contact"
   const wa = whatsappHref();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
+    <div className="mx-auto max-w-[1400px] px-3 py-12 sm:px-6 md:py-16">
       <div className="grid gap-10 lg:grid-cols-[1fr_1.6fr]">
         <div>
           <Badge>Get in touch</Badge>

@@ -1,15 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 import { footerColumns } from "@/data/navigation";
 import { site } from "@/lib/site";
 
 export function Footer() {
   return (
     <footer className="bg-ink text-on-ink">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_repeat(4,1fr)]">
+      <div className="mx-auto grid max-w-[1400px] gap-10 px-3 py-14 sm:px-6 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div className="max-w-xs">
-          <p className="text-lg font-extrabold tracking-tight text-surface-raised">
-            CarRental<span className="text-brand">O</span>
-          </p>
+          <Link href="/" className="inline-block" aria-label="CarRentalO Home">
+            <span className="inline-flex rounded-xl bg-surface-raised px-3 py-1.5 shadow-xs">
+              <Image
+                src="/images/logo.png"
+                alt="CarRentalO"
+                width={140}
+                height={47}
+                className="h-8 w-auto object-contain"
+              />
+            </span>
+          </Link>
           <p className="mt-3 text-sm leading-relaxed text-on-ink/70">
             {site.tagline} Tell us where you&apos;re going and we&apos;ll help you
             find the right rental car for the trip.
@@ -36,7 +45,7 @@ export function Footer() {
         ))}
       </div>
       <div className="border-t border-on-ink/10">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-on-ink/60 sm:flex-row sm:items-center sm:px-6">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-3 px-3 py-6 text-xs text-on-ink/60 sm:flex-row sm:items-center sm:px-6">
           <p>
             © {new Date().getFullYear()} {site.name} · {site.domain}
           </p>

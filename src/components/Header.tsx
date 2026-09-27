@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { mainNav } from "@/data/navigation";
@@ -10,15 +11,15 @@ import { Button } from "@/components/ui/Button";
 
 function Wordmark() {
   return (
-    <Link href="/" className="flex items-center gap-1.5 text-lg font-extrabold tracking-tight text-ink">
-      <svg viewBox="0 0 24 24" className="h-6 w-6 text-brand" aria-hidden="true">
-        <path
-          d="M12 2a8 8 0 0 1 8 8c0 5.5-8 12-8 12S4 15.5 4 10a8 8 0 0 1 8-8z"
-          fill="currentColor"
-        />
-        <circle cx="12" cy="10" r="3.2" fill="#fff" />
-      </svg>
-      CarRental<span className="text-brand">O</span>
+    <Link href="/" className="flex shrink-0 items-center" aria-label="CarRentalO Home">
+      <Image
+        src="/images/logo.png"
+        alt="CarRentalO"
+        width={160}
+        height={54}
+        className="h-9 w-auto object-contain sm:h-11"
+        priority
+      />
     </Link>
   );
 }
@@ -97,10 +98,43 @@ export function Header() {
       className={`sticky top-0 z-50 border-b transition-colors ${
         scrolled || menuOpen
           ? "border-line bg-surface/95 backdrop-blur"
-          : "border-transparent bg-surface"
+          : "border-line/70 bg-surface"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      {/* Upside Topbar: Tagline, Email, Phone */}
+      <div className="border-b border-line/80 bg-[#f8fafc] text-ink-soft">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-1 px-3 py-2 sm:flex-row sm:gap-4 sm:px-6 sm:py-2.5">
+          <p className="text-center text-xs font-semibold tracking-tight text-ink sm:text-left sm:text-[13px]">
+            {site.topbarTagline}
+          </p>
+          <div className="flex shrink-0 items-center gap-3 text-xs sm:text-[13px]">
+            {site.email && (
+              <a
+                href={`mailto:${site.email}`}
+                className="font-medium text-ink-soft transition-colors hover:text-brand"
+              >
+                {site.email}
+              </a>
+            )}
+            {site.email && (site.phoneDisplay || tel) && (
+              <span className="select-none text-slate-300" aria-hidden="true">
+                |
+              </span>
+            )}
+            {(site.phoneDisplay || tel) && (
+              <a
+                href={tel || `tel:${site.phone}`}
+                onClick={() => trackEvent("call_clicked", { placement: "topbar" })}
+                className="font-bold text-ink transition-colors hover:text-brand"
+              >
+                {site.phoneDisplay || site.phone}
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-3 sm:px-4">
         <Wordmark />
 
         <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
@@ -122,9 +156,21 @@ export function Header() {
             <a
               href={tel}
               onClick={() => trackEvent("call_clicked", { placement: "header" })}
-              className="rounded-full px-3.5 py-2 text-sm font-semibold text-ink hover:bg-mint"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface-raised px-3 py-2 text-sm font-semibold text-ink shadow-xs transition-colors hover:border-brand/40 hover:bg-mint"
             >
-              {site.phoneDisplay || "Call us"}
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4 text-brand"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>{site.phoneDisplay || "Call us"}</span>
             </a>
           )}
           <Button href="/contact#quote">Get a Quote</Button>
@@ -153,14 +199,14 @@ export function Header() {
         <div
           id="mobile-menu"
           ref={menuRef}
-          className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-surface md:hidden"
+          className="absolute inset-x-0 top-full h-[calc(100dvh-100%)] overflow-y-auto border-t border-line bg-surface shadow-xl md:hidden"
         >
-          <nav aria-label="Mobile" className="flex flex-col gap-1 px-4 py-6">
+          <nav aria-label="Mobile" className="flex flex-col gap-1 px-3 py-6">
             {mainNav.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-2xl px-4 py-3.5 text-lg font-semibold ${
+                className={`rounded-2xl px-3 py-3.5 text-lg font-semibold ${
                   pathname === link.href ? "bg-mint text-brand-strong" : "text-ink hover:bg-mint"
                 }`}
                 onClick={() => setMenuOpen(false)}

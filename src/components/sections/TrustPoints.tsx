@@ -20,7 +20,7 @@ const points = [
 export function TrustPoints() {
   return (
     <section aria-labelledby="trust-heading" className="bg-mint/60 py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-[1400px] px-3 sm:px-4">
         <h2 id="trust-heading" className="max-w-md text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
           Built around your journey.
         </h2>

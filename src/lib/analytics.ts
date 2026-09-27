@@ -9,7 +9,8 @@ export type ConversionEvent =
   | "call_clicked"
   | "whatsapp_clicked"
   | "vehicle_clicked"
-  | "location_clicked";
+  | "location_clicked"
+  | "directory_clicked";
 
 declare global {
   interface Window {

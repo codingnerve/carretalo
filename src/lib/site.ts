@@ -10,12 +10,15 @@ export const site = {
   domain: "carrentalo.com",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://carrentalo.com",
   tagline: "Find your ride. Start your journey.",
+  topbarTagline:
+    process.env.NEXT_PUBLIC_TOPBAR_TAGLINE ??
+    "Independent rental booking assistance for U.S. travel plans",
   description:
     "CarRentalO helps travelers find the right rental car for any trip — airport pick-ups, weekends, road trips and long stays — with a quick enquiry and a personal quote.",
-  phone: process.env.NEXT_PUBLIC_PHONE ?? "", // e.g. "+15551234567"
-  phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "",
+  phone: process.env.NEXT_PUBLIC_PHONE ?? "+18886735008", // e.g. "+15551234567"
+  phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "(888) 673-5008",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "", // digits only, e.g. "15551234567"
-  email: process.env.NEXT_PUBLIC_EMAIL ?? "",
+  email: process.env.NEXT_PUBLIC_EMAIL ?? "info@carrentalo.com",
 } as const;
 
 export function telHref(): string | null {

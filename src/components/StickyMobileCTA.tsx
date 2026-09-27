@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/Button";
 export function StickyMobileCTA() {
   const tel = telHref();
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-surface-raised/95 px-4 py-3 backdrop-blur md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-surface-raised/95 px-3 py-3 backdrop-blur md:hidden">
       <div className="mx-auto flex max-w-md gap-3">
         {tel && (
           <Button

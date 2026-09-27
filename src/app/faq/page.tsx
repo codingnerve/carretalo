@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <>
-      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 md:py-16">
+      <div className="mx-auto max-w-3xl px-3 py-12 sm:px-6 md:py-16">
         <Badge>FAQ</Badge>
         <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
           Questions, answered.
