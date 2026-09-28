@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { heroImages } from "@/data/images";
+import { site, telHref } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
 import { SearchWidget } from "@/components/SearchWidget";
 
@@ -30,6 +31,8 @@ function RouteDoodle() {
 }
 
 export function Hero() {
+  const tel = telHref();
+
   return (
     <section aria-label="Intro" className="relative overflow-visible">
       <div className="mx-auto max-w-[1400px] px-3 pb-8 pt-8 sm:px-6 md:pb-12 md:pt-14">
@@ -45,13 +48,29 @@ export function Hero() {
               Compare your options, choose the right vehicle and request your
               rental in just a few steps.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="#vehicles" size="lg">
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <Button href="#vehicles" size="lg" className="w-full sm:w-auto uppercase tracking-wide font-extrabold text-sm sm:text-base">
                 Find a Car
               </Button>
-              <Button href="/contact#quote" variant="secondary" size="lg">
-                Get a Quote
-              </Button>
+              {tel ? (
+                <a
+                  href={tel}
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-line bg-surface-raised px-6 py-3.5 text-sm sm:text-base font-extrabold uppercase tracking-wide text-ink shadow-xs transition-all hover:border-brand/40 hover:bg-mint/40 active:scale-[0.98]"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4 shrink-0 text-brand fill-none stroke-current stroke-[2.5] stroke-linecap-round stroke-linejoin-round"
+                    aria-hidden="true"
+                  >
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  <span>CALL {site.phoneDisplay || site.phone}</span>
+                </a>
+              ) : (
+                <Button href="/contact#quote" variant="secondary" size="lg" className="w-full sm:w-auto">
+                  Get a Quote
+                </Button>
+              )}
             </div>
           </div>
 

@@ -1,9 +1,9 @@
 export type NavLink = { label: string; href: string };
 
 export const mainNav: NavLink[] = [
-  { label: "Cars", href: "/car-rental" },
   { label: "Airport", href: "/airport-car-rental" },
   { label: "Locations", href: "/locations" },
+  { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
@@ -35,6 +35,7 @@ export const footerColumns: { heading: string; links: NavLink[] }[] = [
   {
     heading: "Company",
     links: [
+      { label: "About Us", href: "/about" },
       { label: "Contact", href: "/contact" },
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms", href: "/terms" },
