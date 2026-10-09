@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { site } from "@/lib/site";
-import { GA_ID } from "@/lib/analytics";
+import { GA_ID, GADS_ID } from "@/lib/analytics";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
@@ -68,17 +68,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <StickyMobileCTA />
-        {GA_ID && (
+        {(GA_ID || GADS_ID) && (
           <>
             <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID || GADS_ID}`}
               strategy="afterInteractive"
             />
             <Script id="ga-init" strategy="afterInteractive">
               {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GA_ID}');`}
+${GA_ID ? `gtag('config', '${GA_ID}');` : ""}${GADS_ID && GADS_ID !== GA_ID ? `\ngtag('config', '${GADS_ID}');` : ""}`}
             </Script>
           </>
         )}

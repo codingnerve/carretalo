@@ -19,7 +19,8 @@ declare global {
   }
 }
 
-export const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "AW-18500271478";
+export const GADS_ID = process.env.NEXT_PUBLIC_GADS_ID || "";
 
 export function trackEvent(
   event: ConversionEvent,
